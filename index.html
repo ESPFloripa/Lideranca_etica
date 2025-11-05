@@ -24,15 +24,16 @@
 <body class="bg-gray-100 text-gray-800">
 
     <!-- Modal de Senha -->
-    <div id="password-overlay" class="fixed inset-0 bg-gray-900 bg-opacity-80 backdrop-blur-sm z-50 flex items-center justify-center p-4 transition-opacity duration-300 ease-out">
+    <div id="password-overlay" class="fixed inset-0 z-50 flex items-center justify-center p-4 transition-opacity duration-300 ease-out bg-cover bg-center" style="background-image: url('https://i.imgur.com/mDJ2Kzo.jpeg');">
         
-        <!-- Card de Senha com Imagem de Fundo -->
-        <div class="relative bg-cover bg-center rounded-xl shadow-2xl w-full max-w-md overflow-hidden">
+        <!-- Sobreposição escura global -->
+        <div class="absolute inset-0 bg-black/60"></div>
+
+        <!-- Card de Senha (agora flutuante e semi-transparente) -->
+        <div class="relative bg-gray-900/50 rounded-xl shadow-2xl w-full max-w-md overflow-hidden">
             
-            <!-- Imagem de fundo -->
-            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://i.imgur.com/mB7VjEM.jpeg');"></div>
-            <!-- Sobreposição escura para legibilidade -->
-            <div class="absolute inset-0 bg-black/70"></div>
+            <!-- Imagem de fundo (REMOVIDA DESTA DIV) -->
+            <!-- Sobreposição escura para legibilidade (REMOVIDA DESTA DIV) -->
 
             <!-- Conteúdo do Card -->
             <div class="relative p-8 text-center">
@@ -338,8 +339,3 @@
 
 </body>
 </html>
-
-
-
-
-
