@@ -19,6 +19,7 @@
         section[id] {
             scroll-margin-top: 80px;
         }
+        .hidden-content { display: none; opacity: 0; }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -29,12 +30,8 @@
         <!-- Sobreposição escura global -->
         <div class="absolute inset-0 bg-black/60"></div>
 
-        <!-- Card de Senha (agora flutuante e semi-transparente) -->
+        <!-- Card de Senha (flutuante e semi-transparente) -->
         <div class="relative bg-gray-900/50 rounded-xl shadow-2xl w-full max-w-md overflow-hidden">
-            
-            <!-- Imagem de fundo (REMOVIDA DESTA DIV) -->
-            <!-- Sobreposição escura para legibilidade (REMOVIDA DESTA DIV) -->
-
             <!-- Conteúdo do Card -->
             <div class="relative p-8 text-center">
                 
@@ -67,7 +64,7 @@
     </div>
 
     <!-- Conteúdo da Página (Oculto por padrão) -->
-    <div id="page-content" style="display: none; opacity: 0;">
+    <div id="page-content" class="hidden-content">
 
         <!-- Cabeçalho Principal -->
         <header class="relative shadow-sm bg-cover bg-center" style="background-image: url('https://i.imgur.com/mB7VjEM.jpeg');">
@@ -94,189 +91,184 @@
             </div>
         </header>
 
-    <!-- Navegação Flutuante -->
-    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-md">
-        <div class="max-w-5xl mx-auto px-4">
-            <div class="flex justify-center space-x-4 overflow-x-auto py-3">
-                <a href="#atividade-1" class="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-200 transition-colors">Atividade 1</a>
-                <a href="#atividade-2" class="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-200 transition-colors">Atividade 2</a>
-                <a href="#atividade-3" class="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-200 transition-colors">Atividade 3</a>
-                <a href="#atividade-4" class="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-200 transition-colors">Atividade 4</a>
-                <a href="#atividade-5" class="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-200 transition-colors">Atividade 5</a>
+        <!-- Navegação Flutuante -->
+        <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-md">
+            <div class="max-w-5xl mx-auto px-4">
+                <div class="flex justify-center space-x-4 overflow-x-auto py-3">
+                    <a href="#atividade-1" class="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-200 transition-colors">Atividade 1</a>
+                    <a href="#atividade-2" class="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-200 transition-colors">Atividade 2</a>
+                    <a href="#atividade-3" class="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-200 transition-colors">Atividade 3</a>
+                    <a href="#atividade-4" class="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-200 transition-colors">Atividade 4</a>
+                    <a href="#atividade-5" class="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-200 transition-colors">Atividade 5</a>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <!-- Conteúdo Principal -->
-    <main class="max-w-5xl mx-auto p-4 md:p-8 mt-6">
+        <!-- Conteúdo Principal -->
+        <main class="max-w-5xl mx-auto p-4 md:p-8 mt-6">
 
-        <!-- Atividade 1: Leitura -->
-        <section id="atividade-1" class="bg-white p-6 md:p-8 rounded-xl shadow-lg mb-8">
-            <div class="flex justify-between items-start mb-4">
-                <h2 class="text-2xl font-bold text-blue-800">1ª Atividade: Leitura</h2>
-                <span class="flex-shrink-0 bg-blue-100 text-blue-800 text-sm font-medium px-4 py-1 rounded-full">25 minutos</span>
-            </div>
-            <p class="text-gray-700 leading-relaxed mb-6">
-                Leia da página 8 à página 13 do curso de integridade e ética da UNODC.
-            </p>
-            <a href="https://grace.unodc.org/grace/uploads/documents/academics/Integrity%20and%20Ethics%20Module%204%20Ethical%20Leadership%20pt.pdf" target="_blank" class="inline-flex items-center gap-2 bg-blue-600 text-white font-bold py-2 px-5 rounded-lg shadow-md hover:bg-blue-700 transition duration-300 ease-in-out">
-                <!-- Ícone de Livro (SVG inline) -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-                Acessar Leitura (PDF)
-            </a>
-        </section>
-
-        <!-- Atividade 2: Vídeos -->
-        <section id="atividade-2" class="bg-white p-6 md:p-8 rounded-xl shadow-lg mb-8">
-            <div class="flex justify-between items-start mb-4">
-                <h2 class="text-2xl font-bold text-blue-800">2ª Atividade: Vídeos</h2>
-                <span class="flex-shrink-0 bg-blue-100 text-blue-800 text-sm font-medium px-4 py-1 rounded-full">25 minutos</span>
-            </div>
-            <p class="text-gray-700 leading-relaxed mb-6">
-                Após a leitura, assista aos 5 vídeos abaixo.
-            </p>
-            <!-- Grid responsivo para os vídeos -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Vídeo 1 -->
-                <div>
-                    <div class="aspect-video w-full rounded-lg shadow-md overflow-hidden mb-2 bg-gray-200">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/Eq_EQrdc9IE" title="Qual a diferença between ética, moral e lei." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <h3 class="font-semibold text-gray-800">
-                        1. Qual a diferença entre ética, moral e lei.
-                        <a href="https://www.youtube.com/watch?v=Eq_EQrdc9IE" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-600 hover:underline ml-1 font-medium">(abrir em nova aba)</a>
-                    </h3>
+            <!-- Atividade 1: Leitura -->
+            <section id="atividade-1" class="bg-white p-6 md:p-8 rounded-xl shadow-lg mb-8">
+                <div class="flex justify-between items-start mb-4">
+                    <h2 class="text-2xl font-bold text-blue-800">1ª Atividade: Leitura</h2>
+                    <span class="flex-shrink-0 bg-blue-100 text-blue-800 text-sm font-medium px-4 py-1 rounded-full">25 minutos</span>
                 </div>
-                <!-- Vídeo 2 -->
-                <div>
-                    <div class="aspect-video w-full rounded-lg shadow-md overflow-hidden mb-2 bg-gray-200">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/SNTo-sSS-2Y" title="O que é ética?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <h3 class="font-semibold text-gray-800">
-                        2. O que é ética?
-                        <a href="https://www.youtube.com/watch?v=SNTo-sSS-2Y" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-600 hover:underline ml-1 font-medium">(abrir em nova aba)</a>
-                    </h3>
-                </div>
-                <!-- Vídeo 3 -->
-                <div>
-                    <div class="aspect-video w-full rounded-lg shadow-md overflow-hidden mb-2 bg-gray-200">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/fgk9Mnolf3k" title="O que é viés inconsciente?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <h3 class="font-semibold text-gray-800">
-                        3. O que é viés inconsciente?
-                        <a href="https://www.youtube.com/watch?v=fgk9Mnolf3k" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-600 hover:underline ml-1 font-medium">(abrir em nova aba)</a>
-                    </h3>
-                </div>
-                <!-- Vídeo 4 -->
-                <div>
-                    <div class="aspect-video w-full rounded-lg shadow-md overflow-hidden mb-2 bg-gray-200">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/9PP9Ghdsplw" title="Intuição moral e julgamento ético." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <h3 class="font-semibold text-gray-800">
-                        4. Intuição moral e julgamento ético.
-                        <a href="https://www.youtube.com/watch?v=9PP9Ghdsplw" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-600 hover:underline ml-1 font-medium">(abrir em nova aba)</a>
-                    </h3>
-                </div>
-                <!-- Vídeo 5 -->
-                <div>
-                    <div class="aspect-video w-full rounded-lg shadow-md overflow-hidden mb-2 bg-gray-200">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/ynLOdQQ91Lw" title="Tomada de decisão ética." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <h3 class="font-semibold text-gray-800">
-                        5. Tomada de decisão ética.
-                        <a href="https://www.youtube.com/watch?v=ynLOdQQ91Lw" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-600 hover:underline ml-1 font-medium">(abrir em nova aba)</a>
-                    </h3>
-                </div>
-            </div>
-        </section>
-
-        <!-- Atividade 3: Exercício -->
-        <section id="atividade-3" class="bg-white p-6 md:p-8 rounded-xl shadow-lg mb-8">
-            <div class="flex justify-between items-start mb-4">
-                <h2 class="text-2xl font-bold text-blue-800">3ª Atividade: Exercício</h2>
-                <span class="flex-shrink-0 bg-blue-100 text-blue-800 text-sm font-medium px-4 py-1 rounded-full">30 minutos</span>
-            </div>
-            <p class="text-gray-700 leading-relaxed mb-6">
-                Após assistir aos vídeos, leia o caso abaixo e responda as questões no formulário.
-            </p>
-            <!-- Bloco de Citação para o Estudo de Caso -->
-            <div class="bg-gray-50 p-5 rounded-lg border-l-4 border-blue-500 mb-6">
-                <p class="text-gray-800 italic leading-relaxed">
-                    "Um de seus funcionários acaba de ser diagnosticado com uma forma tratável de câncer. Ele contou a você sobre tal problema e lhe pediu que não divulgasse o fato para ninguém, pois considera isso um problema de ordem pessoal. Nos próximos meses, esse funcionário se afastará de suas atividades, principalmente durante os tratamentos com radiação. Suas ausências não são um grande problema para a empresa, porque seus deveres envolvem trabalho direto com computadores, que ele pode fazer em casa. No entanto, alguns dos seus outros funcionários passam a fazer perguntas sobre o que se passa com ele. Você recusa-se, educadamente, a discutir a situação dele. Como resultado, os outros funcionários pensam que o colega está recebendo tratamento especial e estão prontos para ir ao seu chefe para reclamar. Você está confiante de que, se eles souberem da doença do funcionário, irão compreender. Mas, você prometeu ao colega doente não revelar o motivo da ausência dele. Ao mesmo tempo, isso pode vir a criar problemas desnecessários e inúteis para ele se os outros funcionários se queixarem."
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Leia da página 8 à página 13 do curso de integridade e ética da UNODC.
                 </p>
-                <span class="text-sm text-gray-600 mt-4 block">— Robbins, Stephen P. e David A. De Cenzo (1998).</span>
-            </div>
-            <a href="https://forms.gle/uvLRbrFpqM4DgUJR7" target="_blank" class="inline-flex items-center gap-2 bg-green-600 text-white font-bold py-2 px-5 rounded-lg shadow-md hover:bg-green-700 transition duration-300 ease-in-out">
-                <!-- Ícone de Formulário (SVG inline) -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-list"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
-                Responder Formulário (Atividade 3)
-            </a>
-        </section>
+                <!-- Link atualizado para o Google Drive conforme solicitado -->
+                <a href="https://drive.google.com/file/d/1XecHGqegxsJm3e5NnQFJg9akj7adxR7c/view?usp=sharing" target="_blank" class="inline-flex items-center gap-2 bg-blue-600 text-white font-bold py-2 px-5 rounded-lg shadow-md hover:bg-blue-700 transition duration-300 ease-in-out">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    Acessar Leitura (Documento)
+                </a>
+            </section>
 
-        <!-- Atividade 4: Vídeo -->
-        <section id="atividade-4" class="bg-white p-6 md:p-8 rounded-xl shadow-lg mb-8">
-            <div class="flex justify-between items-start mb-4">
-                <h2 class="text-2xl font-bold text-blue-800">4ª Atividade: Vídeo</h2>
-                <span class="flex-shrink-0 bg-blue-100 text-blue-800 text-sm font-medium px-4 py-1 rounded-full">10 minutos</span>
-            </div>
-            <p class="text-gray-700 leading-relaxed mb-6">
-                Clique no link ao lado e assista ao vídeo.
-            </p>
-            <div class="aspect-video w-full rounded-lg shadow-md overflow-hidden mb-2 bg-gray-200">
-                <iframe class="w-full h-full" src="https://www.youtube.com/embed/dqqYEmn5DZQ" title="Você salvaria um garoto de se afogar?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <h3 class="font-semibold text-gray-800 text-center mt-2">
-                "Você salvaria um garoto de se afogar?"
-                <a href="https://www.youtube.com/watch?v=dqqYEmn5DZQ" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-600 hover:underline ml-1 font-medium">(abrir em nova aba)</a>
-            </h3>
-        </section>
-
-        <!-- Atividade 5: Exercício -->
-        <section id="atividade-5" class="bg-white p-6 md:p-8 rounded-xl shadow-lg mb-8">
-            <div class="flex justify-between items-start mb-4">
-                <h2 class="text-2xl font-bold text-blue-800">5ª Atividade: Exercício</h2>
-                <span class="flex-shrink-0 bg-blue-100 text-blue-800 text-sm font-medium px-4 py-1 rounded-full">30 minutos</span>
-            </div>
-            <p class="text-gray-700 leading-relaxed mb-6">
-                Após assistir ao vídeo, reflita sobre o caso abaixo e responda as questões.
-            </p>
-            
-            <div class="bg-gray-50 p-5 rounded-lg border-l-4 border-blue-500 mb-6 space-y-4 text-gray-800 italic leading-relaxed">
-                <p>Você é Secretário de Saúde de um grande município e chega para a sua decisão um caso de uma criança recém nascida com Atrofia Muscular Espinhal (AME) que necessita do uso do medicamento Zolgensma, conhecido como o medicamento mais caro do mundo, cujo tratamento custa em torno de 6 milhões de reais. Pela custo e excepcionalidade a medicação não está no rol dos medicamentos fornecidos pelo município, então os familiares lhe procuram para solicitar a compra e liberação da medicação.</p>
-                <p>A criança nasceu na maternidade da prefeitura e o médico responsável indicou o tratamento, sendo que a junta médica do município atestou que a indicação está correta. A criança já passou por várias internações e a perspectiva é de que venha a ser hospitalizada e dependa de tratamentos especializados por toda a vida caso não faça o uso da medicação. Se a criança sobreviver por um longo período os custo das internações e tratamentos a longo prazo podem até superar o valor da medicação.</p>
-                <p>Você ouve a argumentação dos familiares de que esta é a única medicação disponível para o tratamento desta doença e que a utilização define pela vida ou a morte da criança, fato corroborado pela literatura médica. A família deixa claro que no caso de uma decisão contrária da sua parte fará uma campanha para tentar obter a medicação através de doações ou pela mobilização social para pressionar o poder público, o que pode trazer reflexos políticos.</p>
-                <p>Após a reunião a área responsável pelo orçamento pondera que não há recursos extras no caixa municipal, já que a prefeitura está com o orçamento fechado promovendo inclusive cortes orçamentários nos últimos meses.</p>
-                <p>Você verifica junto à área de planejamento que no caso de decidir por fornecer a medicação significará privar centenas de pessoas de outros tratamentos. Entre as ações que poderão deixar de serem realizadas estão exames e consultas terceirizadas e cirurgias eletivas, que apesar de não serem urgentes, em alguns casos a médio ou longo prazo podem resultar também na diferença entre a vida e morte de muitos pacientes. Além disso há um efeito cascata de restrição da demanda que poderá afetar milhares de pessoas gerando uma piora no grau de satisfação da população, o que também poderá ter efeito político deletério.</p>
-                <p class="font-semibold not-italic text-gray-900">Você como gestor deve decidir se a Prefeitura fornecerá ou não o medicamento à família e justificar a sua decisão baseando-a em seu entendimento ético (não baseie-se em lei ou jurisprudência existente).</p>
-            </div>
-            
-            <a href="https://forms.gle/6bnma54pneVdofNo9" target="_blank" class="inline-flex items-center gap-2 bg-green-600 text-white font-bold py-2 px-5 rounded-lg shadow-md hover:bg-green-700 transition duration-300 ease-in-out">
-                <!-- Ícone de Formulário (SVG inline) -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-list"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
-                Responder Formulário (Atividade 5)
-            </a>
-
-            <div class="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-                <p class="text-sm text-yellow-800">
-                    <strong>*Atenção:</strong> Uma cópia das suas respostas a ambos os formulários será enviada para o seu e-mail. Essa resposta será importante para utilizar no encontro presencial, então não apague a mensagem.
+            <!-- Atividade 2: Vídeos -->
+            <section id="atividade-2" class="bg-white p-6 md:p-8 rounded-xl shadow-lg mb-8">
+                <div class="flex justify-between items-start mb-4">
+                    <h2 class="text-2xl font-bold text-blue-800">2ª Atividade: Vídeos</h2>
+                    <span class="flex-shrink-0 bg-blue-100 text-blue-800 text-sm font-medium px-4 py-1 rounded-full">25 minutos</span>
+                </div>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Após a leitura, assista aos 5 vídeos abaixo.
                 </p>
-            </div>
-        </section>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Vídeo 1 -->
+                    <div>
+                        <div class="aspect-video w-full rounded-lg shadow-md overflow-hidden mb-2 bg-gray-200">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/Eq_EQrdc9IE" title="Qual a diferença entre ética, moral e lei." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <h3 class="font-semibold text-gray-800">
+                            1. Qual a diferença entre ética, moral e lei.
+                            <a href="https://www.youtube.com/watch?v=Eq_EQrdc9IE" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-600 hover:underline ml-1 font-medium">(abrir em nova aba)</a>
+                        </h3>
+                    </div>
+                    <!-- Vídeo 2 -->
+                    <div>
+                        <div class="aspect-video w-full rounded-lg shadow-md overflow-hidden mb-2 bg-gray-200">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/SNTo-sSS-2Y" title="O que é ética?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <h3 class="font-semibold text-gray-800">
+                            2. O que é ética?
+                            <a href="https://www.youtube.com/watch?v=SNTo-sSS-2Y" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-600 hover:underline ml-1 font-medium">(abrir em nova aba)</a>
+                        </h3>
+                    </div>
+                    <!-- Vídeo 3 -->
+                    <div>
+                        <div class="aspect-video w-full rounded-lg shadow-md overflow-hidden mb-2 bg-gray-200">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/fgk9Mnolf3k" title="O que é viés inconsciente?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <h3 class="font-semibold text-gray-800">
+                            3. O que é viés inconsciente?
+                            <a href="https://www.youtube.com/watch?v=fgk9Mnolf3k" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-600 hover:underline ml-1 font-medium">(abrir em nova aba)</a>
+                        </h3>
+                    </div>
+                    <!-- Vídeo 4 -->
+                    <div>
+                        <div class="aspect-video w-full rounded-lg shadow-md overflow-hidden mb-2 bg-gray-200">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/9PP9Ghdsplw" title="Intuição moral e julgamento ético." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <h3 class="font-semibold text-gray-800">
+                            4. Intuição moral e julgamento ético.
+                            <a href="https://www.youtube.com/watch?v=9PP9Ghdsplw" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-600 hover:underline ml-1 font-medium">(abrir em nova aba)</a>
+                        </h3>
+                    </div>
+                    <!-- Vídeo 5 -->
+                    <div>
+                        <div class="aspect-video w-full rounded-lg shadow-md overflow-hidden mb-2 bg-gray-200">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/ynLOdQQ91Lw" title="Tomada de decisão ética." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <h3 class="font-semibold text-gray-800">
+                            5. Tomada de decisão ética.
+                            <a href="https://www.youtube.com/watch?v=ynLOdQQ91Lw" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-600 hover:underline ml-1 font-medium">(abrir em nova aba)</a>
+                        </h3>
+                    </div>
+                </div>
+            </section>
 
-    </main>
+            <!-- Atividade 3: Exercício -->
+            <section id="atividade-3" class="bg-white p-6 md:p-8 rounded-xl shadow-lg mb-8">
+                <div class="flex justify-between items-start mb-4">
+                    <h2 class="text-2xl font-bold text-blue-800">3ª Atividade: Exercício</h2>
+                    <span class="flex-shrink-0 bg-blue-100 text-blue-800 text-sm font-medium px-4 py-1 rounded-full">30 minutos</span>
+                </div>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Após assistir aos vídeos, leia o caso abaixo e responda as questões no formulário.
+                </p>
+                <div class="bg-gray-50 p-5 rounded-lg border-l-4 border-blue-500 mb-6">
+                    <p class="text-gray-800 italic leading-relaxed">
+                        "Um de seus funcionários acaba de ser diagnosticado com uma forma tratável de câncer. Ele contou a você sobre tal problema e lhe pediu que não divulgasse o fato para ninguém, pois considera isso um problema de ordem pessoal. Nos próximos meses, esse funcionário se afastará de suas atividades, principalmente durante os tratamentos com radiação. Suas ausências não são um grande problema para a empresa, porque seus deveres envolvem trabalho direto com computadores, que ele pode fazer em casa. No entanto, alguns dos seus outros funcionários passam a fazer perguntas sobre o que se passa com ele. Você recusa-se, educadamente, a discutir a situação dele. Como resultado, os outros funcionários pensam que o colega está recebendo tratamento especial e estão prontos para ir ao seu chefe para reclamar. Você está confiante de que, se eles souberem da doença do funcionário, irão compreender. Mas, você prometeu ao colega doente não revelar o motivo da ausência dele. Ao mesmo tempo, isso pode vir a criar problemas desnecessários e inúteis para ele se os outros funcionários se queixarem."
+                    </p>
+                    <span class="text-sm text-gray-600 mt-4 block">— Robbins, Stephen P. e David A. De Cenzo (1998).</span>
+                </div>
+                <a href="https://forms.gle/uvLRbrFpqM4DgUJR7" target="_blank" class="inline-flex items-center gap-2 bg-green-600 text-white font-bold py-2 px-5 rounded-lg shadow-md hover:bg-green-700 transition duration-300 ease-in-out">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-list"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
+                    Responder Formulário (Atividade 3)
+                </a>
+            </section>
 
-    <!-- Rodapé -->
-    <footer class="text-center p-8 mt-10 border-t border-gray-200">
-        <p class="text-base text-gray-700 mb-2">
-            A aula terá um fechamento coletivo no próximo encontro presencial.
-        </p>
-        <p class="text-sm text-gray-500">
-            &copy; 2024 - Escola de Saúde Pública de Florianópolis (ESP-Floripa)
-        </p>
-        <p class="text-xs text-gray-400 mt-1">
-            Todos os direitos reservados. Não copie sem autorização.
-        </p>
-    </footer>
+            <!-- Atividade 4: Vídeo -->
+            <section id="atividade-4" class="bg-white p-6 md:p-8 rounded-xl shadow-lg mb-8">
+                <div class="flex justify-between items-start mb-4">
+                    <h2 class="text-2xl font-bold text-blue-800">4ª Atividade: Vídeo</h2>
+                    <span class="flex-shrink-0 bg-blue-100 text-blue-800 text-sm font-medium px-4 py-1 rounded-full">10 minutos</span>
+                </div>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Clique no link ao lado e assista ao vídeo.
+                </p>
+                <div class="aspect-video w-full rounded-lg shadow-md overflow-hidden mb-2 bg-gray-200">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/dqqYEmn5DZQ" title="Você salvaria um garoto de se afogar?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <h3 class="font-semibold text-gray-800 text-center mt-2">
+                    "Você salvaria um garoto de se afogar?"
+                    <a href="https://www.youtube.com/watch?v=dqqYEmn5DZQ" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-600 hover:underline ml-1 font-medium">(abrir em nova aba)</a>
+                </h3>
+            </section>
+
+            <!-- Atividade 5: Exercício -->
+            <section id="atividade-5" class="bg-white p-6 md:p-8 rounded-xl shadow-lg mb-8">
+                <div class="flex justify-between items-start mb-4">
+                    <h2 class="text-2xl font-bold text-blue-800">5ª Atividade: Exercício</h2>
+                    <span class="flex-shrink-0 bg-blue-100 text-blue-800 text-sm font-medium px-4 py-1 rounded-full">30 minutos</span>
+                </div>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Após assistir ao vídeo, reflita sobre o caso abaixo e responda as questões.
+                </p>
+                <div class="bg-gray-50 p-5 rounded-lg border-l-4 border-blue-500 mb-6 space-y-4 text-gray-800 italic leading-relaxed">
+                    <p>Você é Secretário de Saúde de um grande município e chega para a sua decisão um caso de uma criança recém nascida com Atrofia Muscular Espinhal (AME) que necessita do uso do medicamento Zolgensma, conhecido como o medicamento mais caro do mundo, cujo tratamento custa em torno de 6 milhões de reais. Pela custo e excepcionalidade a medicação não está no rol dos medicamentos fornecidos pelo município, então os familiares lhe procuram para solicitar a compra e liberação da medicação.</p>
+                    <p>A criança nasceu na maternidade da prefeitura e o médico responsável indicou o tratamento, sendo que a junta médica do município atestou que a indicação está correta. A criança já passou por várias internações e a perspectiva é de que venha a ser hospitalizada e dependa de tratamentos especializados por toda a vida caso não faça o uso da medicação. Se a criança sobreviver por um longo período os custo das internações e tratamentos a longo prazo podem até superar o valor da medicação.</p>
+                    <p>Você ouve a argumentação dos familiares de que esta é a única medicação disponível para o tratamento desta doença e que a utilização define pela vida ou a morte da criança, fato corroborado pela literatura médica. A família deixa claro que no caso de uma decisão contrária da sua parte fará uma campanha para tentar obter a medicação através de doações ou pela mobilização social para pressionar o poder público, o que pode trazer reflexos políticos.</p>
+                    <p>Após a reunião a área responsável pelo orçamento pondera que não há recursos extras no caixa municipal, já que a prefeitura está com o orçamento fechado promovendo inclusive cortes orçamentários nos últimos meses.</p>
+                    <p>Você verifica junto à área de planejamento que no caso de decidir por fornecer a medicação significará privar centenas de pessoas de outros tratamentos. Entre as ações que poderão deixar de serem realizadas estão exames e consultas terceirizadas e cirurgias eletivas, que apesar de não serem urgentes, em alguns casos a médio ou longo prazo podem resultar também na diferença entre a vida e morte de muitos pacientes. Além disso há um efeito cascata de restrição da demanda que poderá afetar milhares de pessoas gerando uma piora no grau de satisfação da população, o que também poderá ter efeito político deletério.</p>
+                    <p class="font-semibold not-italic text-gray-900">Você como gestor deve decidir se a Prefeitura fornecerá ou não o medicamento à família e justificar a sua decisão baseando-a em seu entendimento ético (não baseie-se em lei ou jurisprudência existente).</p>
+                </div>
+                
+                <a href="https://forms.gle/6bnma54pneVdofNo9" target="_blank" class="inline-flex items-center gap-2 bg-green-600 text-white font-bold py-2 px-5 rounded-lg shadow-md hover:bg-green-700 transition duration-300 ease-in-out">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-list"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
+                    Responder Formulário (Atividade 5)
+                </a>
+
+                <div class="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                    <p class="text-sm text-yellow-800">
+                        <strong>*Atenção:</strong> Uma cópia das suas respostas a ambos os formulários será enviada para o seu e-mail. Essa resposta será importante para utilizar no encontro presencial, então não apague a mensagem.
+                    </p>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Rodapé -->
+        <footer class="text-center p-8 mt-10 border-t border-gray-200">
+            <p class="text-base text-gray-700 mb-2">
+                A aula terá um fechamento coletivo no próximo encontro presencial.
+            </p>
+            <p class="text-sm text-gray-500">
+                &copy; 2024 - Escola de Saúde Pública de Florianópolis (ESP-Floripa)
+            </p>
+            <p class="text-xs text-gray-400 mt-1">
+                Todos os direitos reservados. Não copie sem autorização.
+            </p>
+        </footer>
 
     </div> <!-- Fim do #page-content -->
 
@@ -291,46 +283,34 @@
             const pageContent = document.getElementById('page-content');
 
             function checkPassword() {
-                // Remove o erro ao tentar novamente
                 errorMsg.classList.add('hidden');
                 
                 if (input.value === correctPassword) {
-                    // Animação de fade-out para o overlay
                     overlay.style.opacity = '0';
-                    
-                    // Animação de fade-in para o conteúdo
+                    pageContent.classList.remove('hidden-content');
+                    pageContent.style.display = 'block';
                     pageContent.style.transition = 'opacity 0.5s ease-in';
                     
-                    // Espera o fade-out do overlay
                     setTimeout(() => {
                         overlay.style.display = 'none';
-                        pageContent.style.display = 'block'; // Torna visível
-                        // Força o navegador a aplicar o display:block antes de mudar a opacidade
-                        setTimeout(() => { // <-- CORRIGIDO: Removido o "_" extra
-                            pageContent.style.opacity = '1';
-                        }, 20); // Pequeno delay
-                    }, 300); // 300ms (duração da transição do overlay)
-
+                        pageContent.style.opacity = '1';
+                        window.scrollTo(0, 0);
+                    }, 300);
                 } else {
                     errorMsg.classList.remove('hidden');
-                    input.value = ''; // Limpa o input
-                    input.focus(); // Foca no input novamente
+                    input.value = '';
+                    input.focus();
                 }
             }
 
-            // Adiciona listener para o clique no botão
             button.addEventListener('click', checkPassword);
-            
-            // Adiciona listener para a tecla "Enter" no input
             input.addEventListener('keypress', (e) => {
                 if (e.key === 'Enter') {
-                    e.preventDefault(); // Previne envio de formulário
+                    e.preventDefault();
                     checkPassword();
                 }
             });
 
-            // Foca automaticamente no campo de senha ao carregar
-            // Adicionado um pequeno timeout para garantir que o foco funcione em todos os navegadores
             setTimeout(() => {
                 input.focus();
             }, 100);
